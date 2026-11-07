@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b33">
+  <meta name="description" content="PENGUIN · Social · Club · Fun. Tu comunidad de Discord para charlar, jugar y conocer gente.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PENGUIN · Social · Club · Fun">
+  <meta property="og:description" content="Charla, juegos y buen rollo. Entra, saluda y encuentra a tu gente.">
+  <meta property="og:image" content="/favicon.svg">
+  <title>PENGUIN · Social · Club · Fun</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Penguin Club, inicio"><span class="brand-icon" aria-hidden="true">🐧</span><span><b>PENGUIN</b><small>SOCIAL · CLUB · FUN</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" type="button" aria-label="Abrir menú"><span aria-hidden="true">☰</span></button>
+    <nav id="nav" class="nav" aria-label="Navegación principal"><a href="#club">El club</a><a href="#perfil">Mi perfil</a><a href="#rankings">Rankings</a><a href="#casino">Casino</a><a href="#reglas">Reglas</a><a class="login-link" href="/auth/login">Entrar con Discord</a><button class="logout-link hidden" type="button">Salir</button></nav>
+  </header>
+  <div id="notice" class="notice hidden" role="status"></div>
+  <main id="contenido">
+    <section class="hero wrap" id="inicio">
+      <div class="hero-copy"><p class="kicker"><span class="pulse"></span> TU GENTE ESTÁ AQUÍ</p><h1>Encuentra tu<br><em>lado norte.</em></h1><p class="hero-intro" id="tagline">Charla, juegos y buen rollo. Entra, saluda y encuentra a tu gente.</p><div class="hero-buttons"><a class="button primary invite hidden" href="#" target="_blank" rel="noopener noreferrer">Entrar al Discord <span>↗</span></a><a class="button secondary" href="#club">Descubre el club <span>↓</span></a></div><p class="hero-small" id="description">Una comunidad en español para compartir el rato, jugar y hacer amigos.</p></div>
+      <div class="hero-visual" role="img" aria-label="Pingüino sobre un iceberg"><span class="snowflake snowflake-a" aria-hidden="true">✳</span><span class="snowflake snowflake-b" aria-hidden="true">✦</span><div class="iceberg"><span aria-hidden="true">🐧</span></div><div class="orbit"></div><div class="orbit orbit-b"></div><div class="sticker">buen rollo<br>sin congelar</div></div>
+      <div class="live-stats" aria-label="Actividad del servidor"><div><span>Miembros</span><b id="members">—</b></div><div><span>En línea ahora</span><b id="online">—</b></div><div><span>Impulsos</span><b id="boosts">—</b></div></div>
+    </section>
+    <section class="section wrap" id="club"><div class="heading"><p class="kicker">PASA, ESTÁS EN CASA</p><h2>Un club para <em>ser tú.</em></h2><p>Entra por curiosidad. Quédate por las personas, las conversaciones y los planes.</p></div><div class="feature-grid"><article class="feature"><span class="feature-symbol" aria-hidden="true">✦</span><h3>Charlas sin guion</h3><p>Canales para compartir tus gustos, tus ideas o simplemente cómo ha ido el día.</p></article><article class="feature feature-blue"><span class="feature-symbol" aria-hidden="true">♟</span><h3>Juega con la comunidad</h3><p>Minijuegos, retos y actividades para coincidir y echar unas risas.</p></article><article class="feature feature-orange"><span class="feature-symbol" aria-hidden="true">❄</span><h3>Tu sitio en el club</h3><p>Participa, sube de nivel y desbloquea recompensas del servidor.</p></article></div><div id="figures" class="chips"></div></section>
+    <section id="news-section" class="section wrap hidden"><div class="heading"><p class="kicker">LO ÚLTIMO</p><h2>Novedades <em>del club.</em></h2></div><div id="news" class="cards"></div></section>
+    <section id="events-section" class="section wrap hidden"><div class="heading"><p class="kicker">GUÁRDATE EL PLAN</p><h2>Próximos <em>eventos.</em></h2></div><div id="events" class="cards"></div></section>
+    <section class="section wrap" id="perfil"><div class="heading"><p class="kicker">TU RINCÓN</p><h2>Tu perfil <em>penguin.</em></h2></div><div id="profile" class="profile"><p class="loading">Cargando perfil…</p></div></section>
+    <section class="section wrap" id="rankings"><div class="heading"><p class="kicker">GENTE QUE DEJA HUELLA</p><h2>La <em>clasificación.</em></h2><p>Un poco de pique sano nunca viene mal.</p></div><div class="tabs" role="tablist" aria-label="Categorías del ranking"><button role="tab" id="tab-levels" aria-controls="ranking-panel" aria-selected="true" data-rank="levels">Niveles</button><button role="tab" id="tab-money" aria-controls="ranking-panel" aria-selected="false" data-rank="money" tabindex="-1">Dinero</button><button role="tab" id="tab-bands" aria-controls="ranking-panel" aria-selected="false" data-rank="bands" tabindex="-1">Bandas</button><button role="tab" id="tab-casino" aria-controls="ranking-panel" aria-selected="false" data-rank="casino" tabindex="-1">Casino</button></div><div id="ranking-panel" class="ranking" role="tabpanel" aria-labelledby="tab-levels" tabindex="0"><p class="loading">Cargando clasificación…</p></div></section>
+    <section class="section wrap casino" id="casino"><div class="casino-title"><div class="heading"><p class="kicker">LA SALA DE JUEGOS</p><h2>La suerte está <em>en el hielo.</em></h2><p>Juega con monedas virtuales del servidor. Sin dinero real y sin prisas.</p></div><div class="balance"><small>TU SALDO</small><b id="balance">Inicia sesión</b></div></div><p class="responsible">La moneda es virtual y no tiene valor real. Juega solo por diversión.</p><div id="login-prompt" class="login-prompt"><span>Entra con Discord para consultar tu saldo y jugar.</span><a class="button primary" href="/auth/login">Entrar con Discord</a></div><div id="games" class="hidden"><div class="game-tabs" role="tablist" aria-label="Juegos"><button role="tab" aria-selected="true" aria-controls="game-panel" id="game-ruleta" data-game="ruleta">Ruleta</button><button role="tab" aria-selected="false" tabindex="-1" aria-controls="game-panel" id="game-wordle" data-game="wordle">Wordle</button><button role="tab" aria-selected="false" tabindex="-1" aria-controls="game-panel" id="game-caballos" data-game="caballos">Caballos</button><button role="tab" aria-selected="false" tabindex="-1" aria-controls="game-panel" id="game-bingo" data-game="bingo">Bingo</button></div><div id="game-panel" class="game-panel" role="tabpanel" aria-labelledby="game-ruleta" tabindex="0"></div><div id="casino-stats" class="casino-stats"></div></div></section>
+    <section class="section wrap" id="recompensas"><div class="heading"><p class="kicker">POR ESTAR AQUÍ</p><h2>Recompensas <em>y tienda.</em></h2></div><div class="reward-columns"><div><h3>Por nivel</h3><div id="rewards" class="reward-list"><p class="loading">Cargando…</p></div></div><div><h3>Tienda</h3><div id="shop" class="reward-list"><p class="loading">Cargando…</p></div></div></div></section>
+    <section class="section wrap" id="reglas"><div class="heading"><p class="kicker">PARA ESTAR A GUSTO</p><h2>Reglas <em>claras.</em></h2></div><ol id="rules" class="rules"><li>Respeta a las demás personas. El buen rollo empieza por ahí.</li><li>No spam, acoso ni contenido que incumpla las normas de Discord.</li><li>Cuida lo que compartes y usa cada canal para su propósito.</li></ol></section>
+    <section id="channels-section" class="section wrap hidden"><div class="heading"><p class="kicker">DATE UNA VUELTA</p><h2>Mapa de <em>canales.</em></h2></div><div id="channels" class="channel-grid"></div></section>
+    <section id="staff-section" class="section wrap hidden"><div class="heading"><p class="kicker">QUIENES CUIDAN EL CLUB</p><h2>El <em>equipo.</em></h2></div><div id="staff" class="cards"></div></section>
+    <section class="final-cta wrap"><span class="big-penguin" aria-hidden="true">🐧</span><p class="kicker">YA TIENES SITIO</p><h2>Nos vemos <em>dentro.</em></h2><p>Ven a saludar. El resto viene solo.</p><a class="button primary invite hidden" href="#" target="_blank" rel="noopener noreferrer">Unirme al Discord <span>↗</span></a></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#inicio"><span class="brand-icon" aria-hidden="true">🐧</span><span><b>PENGUIN</b><small>SOCIAL · CLUB · FUN</small></span></a><p>Hecho con frío, pero con cariño. <span id="year"></span></p></footer>
+</body>
+</html>
